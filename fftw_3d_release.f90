@@ -82,17 +82,18 @@
         double complex input(N)
 
 ! Data filling 
-
         do i=1,n
         input(i) = i  
         end do
 
+#ifdef __FINTERFACE__
         print*, 'Data before forward fft using fftw fortran interface',&
                 input
+#endif
 
-
+#ifdef __CINTERFACE__
         print*, 'Data before forward fft using fftw C interface',input
-
+#endif
 
         call fftw_3d(input)
 
