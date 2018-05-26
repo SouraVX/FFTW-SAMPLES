@@ -103,13 +103,13 @@
         end do
 
 #ifdef __FINTERFACE__
-        print*, 'Data after backward fft using fftw BASIC fortran'&
-                 'interface', input
+        print*, 'Data after backward fft using fftw BASIC fortran &
+                 interface', input
 #endif
 
 #ifdef __CINTERFACE__
-        print*, 'Data after backward fft using fftw BASIC C interface'&
-                 , input
+        print*, 'Data after backward fft using fftw BASIC C interface',&
+                 input
 #endif
 
         end
